@@ -1,0 +1,30 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: vanutp <hello@vanutp.dev>
+Date: Wed, 15 Dec 2021 17:15:39 +0300
+Subject: [PATCH] Update suppression
+
+
+diff --git a/src/main/java/net/minecraft/world/inventory/AbstractContainerMenu.java b/src/main/java/net/minecraft/world/inventory/AbstractContainerMenu.java
+index 1f4d3a48553a467bcbd4799735d1950c9c2dbe23..754ff1cb74f77e81f8b1d63313f57192102a9711 100644
+--- a/src/main/java/net/minecraft/world/inventory/AbstractContainerMenu.java
++++ b/src/main/java/net/minecraft/world/inventory/AbstractContainerMenu.java
+@@ -605,8 +605,8 @@ public abstract class AbstractContainerMenu {
+                                 if (itemstack1.getCount() > i2) {
+                                     slot2.set(itemstack1.split(i2));
+                                 } else {
+-                                    playerinventory.setItem(button, ItemStack.EMPTY);
+                                     slot2.set(itemstack1);
++                                    playerinventory.setItem(button, ItemStack.EMPTY);
+                                 }
+                             }
+                         } else if (slot2.mayPickup(player) && slot2.mayPlace(itemstack1)) {
+@@ -618,8 +618,8 @@ public abstract class AbstractContainerMenu {
+                                     player.drop(itemstack, true);
+                                 }
+                             } else {
+-                                playerinventory.setItem(button, itemstack);
+                                 slot2.set(itemstack1);
++                                playerinventory.setItem(button, itemstack);
+                                 slot2.onTake(player, itemstack);
+                             }
+                         }
